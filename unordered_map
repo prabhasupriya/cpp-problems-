@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    unordered_map<int,int> mapelemet;
+    int n;
+    cout<< "enter thevalue of n " ;
+    cin >> n;
+    vector<int> arr(n);
+    vector<int> m(n);
+    for(int i=0;i<n;i++){
+        cin >> arr[i];
+    }
+    for(int i : arr){
+        mapelemet[i]++;
+    }
+    for(auto freq : mapelemet){
+        if(freq.second >=1){
+            cout << freq.first << " -> " << freq.second;
+            cout <<" ";
+        }
+    }
+}
